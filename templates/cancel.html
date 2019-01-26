@@ -1,0 +1,246 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href='{{url_for("static", filename="flip.css")}}'>
+
+<link href='{{url_for("static", filename="vendor/bootstrap/css/bootstrap.min.css")}}' rel="stylesheet">
+
+<link href='{{url_for("static", filename="vendor/fontawesome-free/css/all.min.css")}}' rel="stylesheet" type="text/css">
+
+<link href='{{url_for("static", filename="vendor/magnific-popup/magnific-popup.css")}}' rel="stylesheet" type="text/css">
+
+<link href='{{url_for("static", filename="freelancer.min.css")}}' rel="stylesheet">
+
+<!-- Custom fonts for this template -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="{{ url_for('static', filename='fullcalendar.min.css') }}" rel='stylesheet' />
+<link href="{{ url_for('static', filename='fullcalendar.print.css') }}" rel='stylesheet' media='print' />
+<script src="{{ url_for('static', filename='lib/moment.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fullcalendar.min.js') }}"></script>
+    <link rel="shortcut icon" type="image/jpg" href='{{url_for("static", filename="favicon.jpg")}}'/>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+  <body id="page-top" draggable="false">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href='{{url_for("home")}}'>Houdini  Mess</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("home")}}'>Home</a></li>
+              <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("calendar")}}'>View Registration</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("logout")}}'>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br><br><br>
+
+
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Cancel Meals</h2>
+              <hr class="star-dark mb-5">
+
+              <form action="/cancel" method="post">
+                  <hr class="hr">
+                  <div>
+                  <h5 class="text-info"> Pick a Date </h5>
+                  <input style="border-radius: 10px;" type="text" size="22px" id = "datpicker" name="daterange" value="daterange"/>
+                  </div>
+                  <br>
+                  <div align="left" style="margin-left: 40%">   
+                      <div class="checkbox">
+                      <ul align="left">
+                       <li><input name="b" type="checkbox" value="b"><label>Breakfast</label></li>
+                       <li><input name="l" type="checkbox" value="l"><label>Lunch</label></li>
+                       <li><input name="s" type="checkbox" value="s"><label>Snacks</label></li>
+                       <li><input name="d" type="checkbox" value="d"><label>Dinner</label></li>
+                    </ul>
+                  </div>
+                  <br>
+                  <br></div>
+                  <div align="center">
+                  <button type="submit" class="btn btn-primary btn-xl"  id="cancel" value="cancel" >Submit</button>
+              </form>
+              <hr class="hr">
+              <br>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ </div>
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">221B, Baker Street
+              <br>S.H.Holmes, Consulting Detective
+              <br>London</p>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">S.H.Holmes</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-google-plus-g"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">About Houdini Mess</h4>
+            <p class="lead mb-0">Pranjal Patidar
+              <br>Aditya Tewari
+              <br>Akshansh Sharma
+              <br>Sandeep Gupta
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- ..................CONTROL CENTER  END .............................................. -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}" ></script>
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jqBootstrapValidation.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/contact_me.js')}}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script>
+    <script type="text/javascript">
+      $('.flip').hover(function(){
+      $(this).find('.card').toggleClass('flipped');
+      });
+    </script>
+
+    <script type="text/javascript">
+      $('.popover-dismiss').popover({
+          trigger: 'focus'
+      });
+
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      });
+    </script>
+
+    <script>
+      $(function() {
+        $('input[name="daterange"]').daterangepicker({
+          timePicker: false,
+          startDate: moment().add(1,'days'),
+          endDate: moment().add(1,'days'),
+          minDate: moment().add(1,'days'),
+          locale: {
+            format: 'DD/MM/YYYY'
+          }
+        });
+      });
+     </script> 
+
+    <script type="text/javascript">
+      $(document).ready( function() {
+            $(document).on('change', '.btn-file :file', function() {
+          var input = $(this),
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+          input.trigger('fileselect', [label]);
+          });
+
+          $('.btn-file :file').on('fileselect', function(event, label) {
+              
+              var input = $(this).parents('.input-group').find(':text'),
+                  log = label;
+              
+              if( input.length ) {
+                  input.val(log);
+              } else {
+                  if( log ) alert(log);
+              }
+            
+          });
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+                  var reader = new FileReader();
+                  
+                  reader.onload = function (e) {
+                      $('#img-upload').attr('src', e.target.result);
+                  }
+                  
+                  reader.readAsDataURL(input.files[0]);
+              }
+          }
+
+          $("#imgInp").change(function(){
+              readURL(this);
+          });   
+        });
+    </script>
+  <script type="text/javascript">
+  $(document).ready(function () {
+      $('#cancel').click(function() {
+        checked = $("input[type=checkbox]:checked").length;
+
+        if(!checked) {
+          alert("You must check at least one checkbox.");
+          return false;
+        }
+
+      });
+  });
+</script>
+
+  </body>
+</html>
+
+

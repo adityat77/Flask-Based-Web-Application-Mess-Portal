@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.2.0/zxcvbn.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href='{{url_for("static", filename="favicon.jpg")}}'/>
+
+<!-- <script src="https://bootstrap.bundle.min.js / bootstrap.bundle.js"></script> 
+ -->
+ <link rel=stylesheet type=text/css media="all" href='{{url_for("static", filename="login.css")}}'>
+  <link rel=stylesheet type=text/css media="all" href='{{url_for("static", filename="strength.css")}}'>
+
+</head>
+<body>
+<div class="login-form">
+    <form action="/register" method="post">
+      
+      <div class="avatar">
+      <img src="/static/img/mess.png" alt="Avatar">
+      </div>
+          <h2 class="text-center">Sign Up</h2>   
+      
+      <div class="form-group">
+          <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required">
+      </div>
+      
+      <div class="form-group">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username" required="required">
+      </div>
+      
+      <div class="form-group">
+          <input type="password" class="form-control" name="password" id="password"placeholder="Password" required="required">
+          <meter max="4" id="password-strength-meter"></meter>
+          <p id="password-strength-text"></p>
+      </div>        
+            
+      <select class ="form-control" name="defaultb" id="defaultb" required="required" >
+        <option value="">Select Default Breakfast</option>
+            <option value="north">North</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+            <option value="south">South</option>
+          </select><br>
+          <select class ="form-control" name="defaultl" id="defaultl" required="required">
+        <option value="">Select Default Lunch</option>
+            <option value="north">North</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+            <option value="south">South</option>
+          </select><br>
+          <select class ="form-control" name="defaults" id="defaults" required="required">
+        <option value="">Select Default Snacks</option>
+            <option value="north">North</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+            <option value="south">South</option>
+          </select><br>
+          <select class ="form-control" name="defaultd" id="defaultd" required="required" required="required">
+        <option value="">Select Default Dinner</option>
+            <option value="north">North</option>
+            <option value="east">East</option>
+            <option value="west">West</option>
+            <option value="south">South</option>
+          </select><br>
+
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-lg btn-block" value="Register">Register</button>
+      </div>
+      
+      <div class="clearfix">
+      </div>
+    
+    </form>
+    <p class="text-center small">Have an account? <a href="/login">Login up!</a></p>
+</div>
+
+<script type="text/javascript">
+      var strength = {
+        0: "Worst ☹",
+        1: "Bad ☹",
+        2: "Weak ☹",
+        3: "Good ☺",
+        4: "Strong ☻"
+        }
+
+        var password = document.getElementById('password');
+        var meter = document.getElementById('password-strength-meter');
+        var text = document.getElementById('password-strength-text');
+
+        password.addEventListener('input', function()
+        {
+            var val = password.value;
+            var result = zxcvbn(val);
+            
+            // Update the password strength meter
+            meter.value = result.score;
+           
+            // Update the text indicator
+            if(val !== "") {
+                text.innerHTML = "Strength: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" + result.feedback.warning + " " + result.feedback.suggestions + "</span"; 
+            }
+            else {
+                text.innerHTML = "";
+            }
+        });
+    </script>
+
+</body>
+</html>                            

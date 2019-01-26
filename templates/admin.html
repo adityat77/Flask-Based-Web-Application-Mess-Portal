@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Houdini Mess</title>
+
+    <link rel="stylesheet" href="flip.css">
+
+    <!-- Bootstrap core CSS -->
+    
+
+    <!-- Custom fonts for this template -->
+    
+    <link rel="stylesheet" href='{{url_for("static", filename="flip.css")}}'>
+
+    <link rel="shortcut icon" type="image/jpg" href='{{url_for("static", filename="favicon.jpg")}}'/>
+
+
+    <!-- <link rel="stylesheet" type="text/css" href='{{url_for("static", filename="image_upload.css")}}'> -->
+
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    
+
+    <link href='{{url_for("static", filename="vendor/bootstrap/css/bootstrap.min.css")}}' rel="stylesheet">
+
+    <link href='{{url_for("static", filename="vendor/fontawesome-free/css/all.min.css")}}' rel="stylesheet" type="text/css">
+
+    <link href='{{url_for("static", filename="vendor/magnific-popup/magnific-popup.css")}}' rel="stylesheet" type="text/css">
+
+    <link href='{{url_for("static", filename="freelancer.min.css")}}' rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template  <link href="css/freelancer.min.css" rel="stylesheet"> -->
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Houdini  Mess</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Change Mess Menu</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"  href='{{url_for("feedback")}}'>Feedbacks</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"  href="#portfolio1">Visual-Analysis</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("logout")}}'>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container" align="center" >
+
+        <h1>WELCOME  ADMIN</h1>
+
+        <hr class="star-light">
+<!--    <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2> -->
+      </div>
+    </header>
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Change Mess-Menu</h2>
+        <hr class="star-dark mb-5">
+        <div align="center">
+          	<form action="/admin" method="post">
+				<div class="form-group">
+				  <label for="sel1">Select list:</label>
+				  <select class="form-control-sm" name="days" id="sel1">
+				    <option value="Mon">Monday</option>
+				    <option value="Tue">Tuesday</option>
+				    <option value="Wed">Wednesday</option>
+				    <option value="Thu">Thursday</option>
+				    <option value="Fri">Friday</option>
+				    <option value="Sat">Saturday</option>
+				    <option value="Sun">Sunday</option>
+				  </select>
+				</div>
+				<div class="form-group" id="meals">
+				  <label for="sel1">Select list:</label>
+				  <select class="form-control-sm"  name="meals" id="sel1">
+				    <option value="breakfast">Breakfast</option>
+				    <option value="lunch">Lunch</option>
+				    <option value="snacks">Snacks</option>
+				    <option value="dinner">Dinner</option>
+				  </select>
+				</div>
+				    <input type="text" class="form-control" name="menu" id="menu" placeholder="Enter New Menu" required="required" style="width: 40%">
+				    <br><br>
+				    <div >
+				    </div>
+				    <button type="submit" name="action" class="btn btn-secondary btn-block" value="changeMenu" style="width: 20%">Chaneg Mess Menu</button>
+        	</form>
+       	</div>
+      </div>
+    </section>
+
+    
+    <!-- About Section -->
+   
+
+    <!-- Contact Section -->
+    <section  id="contact" class="bg-primary text-white text-center">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white mb-0">Feedback Form</h2>
+        <hr class="star-light mb-5">
+        
+              <div class="container" align="center">
+                 
+                 <a class="text-white" href='{{url_for("feedback")}}'>(click here to see Feedbacks)</a>
+
+            </div>
+      </div>
+    </section>
+
+    <section id="portfolio1" >
+
+      <div class="text-secondary" align="center">
+        <h2 class="h2"><u>Total Earnings</u></h2>
+        <hr class="hr">
+        <h4>Breakfast :: {{msg[1][0]}}</h4>
+        <h4>Lunch :: {{msg[1][1]}}</h4>
+        <h4>Snacks :: {{msg[1][2]}}</h4>
+        <h4>Dinner :: {{msg[1][3]}}</h4>
+      </div>
+      
+
+      <br><br><br>
+        <div align="center">
+              <div id="chartContainer" style="height: 450px; width: 80%;"></div>
+
+        </div>
+      
+
+
+    </section>
+
+    <!-- Footer -->
+     <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">221B, Baker Street
+              <br>S.H.Holmes, Consulting Detective
+              <br>London</p>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">S.H.Holmes</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-google-plus-g"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">About Houdini Mess</h4>
+            <p class="lead mb-0">Pranjal Patidar
+              <br>Aditya Tewari
+              <br>Akshansh Sharma
+              <br>Sandeep Gupta
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+
+
+    <!-- Bootstrap core JavaScript -->
+   <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}" ></script>
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jqBootstrapValidation.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/contact_me.js')}}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script>
+    <script type="text/javascript">
+      $('.flip').hover(function(){
+      $(this).find('.card').toggleClass('flipped');
+      });
+    </script>
+
+    <script type="text/javascript">
+      $('.popover-dismiss').popover({
+          trigger: 'focus'
+      });
+
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      });
+
+    </script>
+
+    <script>
+        window.onload = function () {
+
+        var chart = new CanvasJS.Chart("chartContainer", {
+          animationEnabled: true,
+          title:{
+            text: "REGISTRATIONS-COUNTS"
+          },  
+          axisY: {
+            title: "Registration Count",
+            titleFontColor: "#4F81BC",
+            lineColor: "#4F81BC",
+            labelFontColor: "#4F81BC",
+            tickColor: "#4F81BC"
+          },
+          // axisY2: {
+          //   title: "Millions of Barrels/day",
+          //   titleFontColor: "#C0504E",
+          //   lineColor: "#C0504E",
+          //   labelFontColor: "#C0504E",
+          //   tickColor: "#C0504E"
+          // },  
+          toolTip: {
+            shared: true
+          },
+          legend: {
+            cursor:"pointer",
+            itemclick: toggleDataSeries
+          },
+          data: [{
+            type: "column",
+            name: "No. of registrations",
+            legendText: "Meals this Semester",
+            showInLegend: true, 
+            dataPoints:[
+              { label: "Breakfast", y: {{msg[0][0]}} },
+              { label: "Lunch", y: {{msg[0][1]}} },
+              { label: "Snacks", y: {{msg[0][2]}} },
+              { label: "Dinner", y: {{msg[0][3]}} }]
+          }]
+          // {
+          //   type: "column", 
+          //   name: "Oil Production (million/day)",
+          //   legendText: "Oil Production",
+          //   axisYType: "secondary",
+          //   showInLegend: true,
+          //   dataPoints:[
+          //     { label: "Saudi", y: 10.46 },
+          //     { label: "Venezuela", y: 2.27 },
+          //     { label: "Iran", y: 3.99 },
+          //     { label: "Iraq", y: 4.45 },
+          //     { label: "Kuwait", y: 2.92 },
+          //     { label: "UAE", y: 3.1 }
+          //   ]
+          // }]
+        });
+        chart.render();
+
+        function toggleDataSeries(e) {
+          if (typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+          }
+          else {
+            e.dataSeries.visible = true;
+          }
+          chart.render();
+        }
+
+        }
+        </script>
+
+
+  </body>
+
+</html>

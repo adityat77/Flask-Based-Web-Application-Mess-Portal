@@ -1,0 +1,188 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href='{{url_for("static", filename="flip.css")}}'>
+
+<link href='{{url_for("static", filename="vendor/bootstrap/css/bootstrap.min.css")}}' rel="stylesheet">
+
+<link href='{{url_for("static", filename="vendor/fontawesome-free/css/all.min.css")}}' rel="stylesheet" type="text/css">
+
+<link href='{{url_for("static", filename="vendor/magnific-popup/magnific-popup.css")}}' rel="stylesheet" type="text/css">
+
+<link href='{{url_for("static", filename="freelancer.min.css")}}' rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href='{{url_for("static", filename="favicon.jpg")}}'/>
+
+<!-- Custom fonts for this template -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="{{ url_for('static', filename='fullcalendar.min.css') }}" rel='stylesheet' />
+<link href="{{ url_for('static', filename='fullcalendar.print.css') }}" rel='stylesheet' media='print' />
+<script src="{{ url_for('static', filename='lib/moment.min.js') }}"></script>
+<script src="{{ url_for('static', filename='lib/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fullcalendar.min.js') }}"></script>
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			defaultDate: '2018-11-07',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: {
+				url: 'data',
+				error: function() {
+					$('#script-warning').show();
+				}
+			},
+			loading: function(bool) {
+				$('#loading').toggle(bool);
+			}
+		});
+
+	});
+
+</script>
+
+<style>
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#script-warning {
+		display: none;
+		background: #eee;
+		border-bottom: 1px solid #ddd;
+		padding: 0 10px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12px;
+		color: red;
+	}
+
+	#loading {
+		display: none;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 40px auto;
+		padding: 0 10px;
+	}
+
+</style>
+</head>
+
+
+  <body id="page-top" draggable="false">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href='{{url_for("home")}}'>Houdini  Mess</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("home")}}'>Home</a></li>
+              <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("cancel")}}'>Cancel Meals</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("changeReg")}}'>Change Registration</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("logout")}}'>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br><br><br><br>
+	<div id='script-warning'>
+		Error getting data from <code>/data</code> endpoint.
+	</div>
+
+	<div id='loading'>loading...</div>
+
+	<div id='calendar' draggable="false" mousedown="false">
+<!-- <script type="text/javascript">$('.fc-event-container').dragstart( "destroy" ) -->
+</script>
+
+<!-- <script>document.getElementsByClassName('fc-event-container').ondragstart = function() { return false; };
+document.getElementsByClassName('fc-event-container').mousedown = function() { return false; };
+document.getElementsByClassName('fc-event-container').removeEventListener("mousemove", myFunction);;
+</script> -->
+</div>
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">221B, Baker Street
+              <br>S.H.Holmes, Consulting Detective
+              <br>London</p>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">S.H.Holmes</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-google-plus-g"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">About Houdini Mess</h4>
+            <p class="lead mb-0">Pranjal Patidar
+              <br>Aditya Tewari
+              <br>Akshansh Sharma
+              <br>Sandeep Gupta
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+<!-- <script type="text/javascript"> document.getElementsByClassName('fc-draggable').style.pointerEvents = 'none';
+</script> -->
+<script>$('.fc-event-container').click(function(){return false;});
+</script>
+</body>
+</html>

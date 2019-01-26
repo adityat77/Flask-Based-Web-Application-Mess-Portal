@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Houdini Mess</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href='{{url_for("static", filename="flip.css")}}'>
+
+    <link href='{{url_for("static", filename="vendor/bootstrap/css/bootstrap.min.css")}}' rel="stylesheet">
+
+    <link href='{{url_for("static", filename="vendor/fontawesome-free/css/all.min.css")}}' rel="stylesheet" type="text/css">
+
+    <link href='{{url_for("static", filename="vendor/magnific-popup/magnific-popup.css")}}' rel="stylesheet" type="text/css">
+
+    <link href='{{url_for("static", filename="freelancer.min.css")}}' rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+ 
+<!-- <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+ -->
+<!-- Plugin CSS -->
+
+    <!-- Custom styles for this template -->
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Houdini  Mess</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Mess</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Control Center</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Feedback Form</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href='{{url_for("logout")}}'>Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container" align="center" >
+            <div class="card" style="width: 35rem; margin-top: -50px; color: black;border-radius: 20px;box-shadow: 15px 15px 10px 0px rgba(10,0,0,1); padding: 15px">
+              <div class="card-body" align="left">
+                <h3>Username: {{row[0]}}</h3>
+                <h3>Name :: {{row[7]}}</h3>
+                <h3>Todays Meal</h3>
+                <h4>Breakfast:: {{tbf}}</h4>
+                <h4>Lunch:: {{tlu}}</h4>
+                <h4>Snacks:: {{tsn}}</h4>
+                <h4>Dinner:: {{tdn}}</h4>
+               
+
+                <h3>Cancellation Timings</h3>
+                <h4>Breakfast ::&nbsp&nbspPrevious Day : 5:00:00 pm</h4>
+                <h4>Lunch&nbsp     ::&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSame Day : 07:00:00 am</h4>
+                <h4>Dinner ::&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSame Day : 15:00:00 am</h4>
+              </div>
+            </div>
+
+        <hr class="star-light">
+<!--    <h2 class="font-weight-light mb-0">Web Developer - Graphic Artist - User Experience Designer</h2> -->    
+      </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Mess-Menu</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <a class="portfolio-item d-block mx-auto" href="#north">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="/static/img/portfolio/north.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a class="portfolio-item d-block mx-auto" href="#south">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="/static/img/portfolio/south.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a class="portfolio-item d-block mx-auto" href="#east">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="/static/img/portfolio/east.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a class="portfolio-item d-block mx-auto" href="#west">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="/static/img/portfolio/west.jpg" alt="">
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-primary text-white mb-0" id="about">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Control Center</h2>
+        <hr class="star-light mb-5">
+        
+                  
+      </div>
+      <div style="margin: 0px 50px;">
+        <a class="portfolio-item d-block mx-auto btn btn-outline-light btn-xl btn-block" role="button" aria-pressed="true" href="#cancel">Cancel Meals</a>
+        <a class="portfolio-item d-block mx-auto btn btn-outline-light btn-xl btn-block" role="button" aria-pressed="true" href="#change">Change Mess Registration</a>
+        <a class="btn btn-outline-light btn-xl btn-block" role="button" aria-pressed="true" href='{{url_for("calendar")}}'>View Mess Registration</a>
+        <a class="portfolio-item d-block mx-auto btn btn-outline-light btn-xl btn-block" role="button" aria-pressed="true" href="#bill">View Mess Bill</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Feedback Form</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+           
+            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+             
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <div class="dropdown">
+                      <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Select Mess
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button">North</button>
+                        <button class="dropdown-item" type="button">South</button>
+                        <button class="dropdown-item" type="button">East</button>
+                        <button class="dropdown-item" type="button">West</button>
+                      </div>
+                   </div>
+                </div>
+              </div>
+              
+              <div class="control-group">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> NORTH
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> SOUTH
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> EAST
+                  </label>
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option4" autocomplete="off"> WEST
+                  </label>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <label>Message</label>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg" id="sendMessageButton">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">Location</h4>
+            <p class="lead mb-0">221B, Baker Street
+              <br>S.H.Holmes, Consulting Detective
+              <br>London</p>
+          </div>
+          <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-4">S.H.Holmes</h4>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-google-plus-g"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
+                  <i class="fab fa-fw fa-dribbble"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-uppercase mb-4">About Houdini Mess</h4>
+            <p class="lead mb-0">Pranjal Patidar
+              <br>Aditya Tewari
+              <br>Akshansh Sharma
+              <br>Sandeep Gupta
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+
+<!-- ...............MESS MENU ................................................................. -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="north">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-16 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">North Mess</h2>
+              <hr class="star-dark mb-5">
+
+              <div class="container">
+                <div class="row">
+                <div class="col-sm" style="margin-bottom: 30px;">
+                      <div class="flip">
+                        <div class="card"> 
+                          <div class="face front"> 
+                            <div class="inner text-secondary text-uppercase mx-auto">
+                              <br><br><br> 
+                              <h3>MONDAY</h3>
+                            </div>
+                          </div> 
+                          <div class="face back"> 
+                            <div class="inner text-center"> 
+                              <div style="margin: 0px 25px;">
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[0][0][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Breakfast</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[0][1][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Lunch</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[0][2][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Snacks</button>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[0][3][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Dinner</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+                  <div class="col-sm" style="margin-bottom: 30px;">
+                      <div class="flip">
+                        <div class="card"> 
+                          <div class="face front"> 
+                            <div class="inner text-secondary text-uppercase mx-auto">
+                            <br><br><br> 
+                              <h3>TUESDAY</h3>
+                            </div>
+                          </div> 
+                          <div class="face back"> 
+                            <div class="inner text-center"> 
+                              <div style="margin: 0px 25px;">
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[1][0][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Breakfast</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[1][1][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Lunch</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[1][2][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Snacks</button>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[1][3][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Dinner</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+                  <div class="col-sm" style="margin-bottom: 30px;">
+                      <div class="flip">
+                        <div class="card"> 
+                          <div class="face front"> 
+                            <div class="inner text-secondary text-uppercase mx-auto">
+                              <br><br><br>
+                              <h3>WEDNESDAY</h3>
+                            </div>
+                          </div> 
+                          <div class="face back"> 
+                            <div class="inner text-center"> 
+                              <div style="margin: 0px 25px;">
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[2][0][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Breakfast</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[2][1][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Lunch</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[2][2][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Snacks</button>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[2][3][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Dinner</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+                  <div class="col-sm" style="margin-bottom: 30px;">
+                      <div class="flip">
+                        <div class="card"> 
+                          <div class="face front"> 
+                            <div class="inner text-secondary text-uppercase mx-auto"> 
+                              <br><br><br>  
+                              <h3>THURSDAY</h3>
+                            </div>
+                          </div> 
+                          <div class="face back"> 
+                            <div class="inner text-center"> 
+                              <div style="margin: 0px 25px;">
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[3][0][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Breakfast</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[3][1][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Lunch</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[3][2][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Snacks</button>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[3][3][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Dinner</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+                  <div class="col-sm" style="margin-bottom: 30px;">
+                      <div class="flip">
+                        <div class="card"> 
+                          <div class="face front"> 
+                            <div class="inner text-secondary text-uppercase mx-auto">
+                              <br><br><br>
+                              <h3>FRIDAY</h3>
+                            </div>
+                          </div> 
+                          <div class="face back"> 
+                            <div class="inner text-center"> 
+                              <div style="margin: 0px 25px;">
+                             <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[4][0][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Breakfast</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[4][1][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Lunch</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[4][2][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Snacks</button>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[4][3][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Dinner</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+                  <div class="col-sm" style="margin-bottom: 30px;">
+                      <div class="flip">
+                        <div class="card"> 
+                          <div class="face front"> 
+                            <div class="inner text-secondary text-uppercase mx-auto">
+                              <br><br><br>
+                              <h3>SATURDAY</h3>
+                            </div>
+                          </div> 
+                          <div class="face back"> 
+                            <div class="inner text-center"> 
+                              <div style="margin: 0px 25px;">
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[5][0][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Breakfast</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[5][1][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Lunch</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[5][2][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Snacks</button>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[5][3][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Dinner</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+                  <div class="col-sm" style="margin-bottom: 30px;">
+                      <div class="flip">
+                        <div class="card"> 
+                          <div class="face front"> 
+                            <div class="inner text-secondary text-uppercase mx-auto">
+                              <br><br><br>
+                              <h3>SUNDAY</h3>
+                            </div>
+                          </div> 
+                          <div class="face back"> 
+                            <div class="inner text-center"> 
+                              <div style="margin: 0px 25px;">
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[6][0][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Breakfast</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[6][1][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Lunch</button></a>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[6][2][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Snacks</button>
+                              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" title="Menu : " data-content={{north[6][3][0]}}><button type="button" class="btn btn-outline-dark btn-sm btn-block">Dinner</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+        <!--       <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content={{north[0][1][0]}}>popover</a> -->
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="south">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="/static/img/portfolio/cake.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal mfp-hide" id="east">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="/static/img/portfolio/circus.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal mfp-hide" id="west">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="/static/img/portfolio/game.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ..................MESS MENU END.............................................. -->
+
+
+    <!-- ..................CONTROL CENTER.............................................. -->
+
+    <div class="portfolio-modal mfp-hide" id="cancel">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Cancel Meals</h2>
+              <hr class="star-dark mb-5">
+              
+              <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+
+
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-modal mfp-hide" id="change">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="/static/img/portfolio/game.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-modal mfp-hide" id="register">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="/static/img/portfolio/game.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portfolio-modal mfp-hide" id="bill">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">Project Name</h2>
+              <hr class="star-dark mb-5">
+              <img class="img-fluid mb-5" src="/static/img/portfolio/game.png" alt="">
+              <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <a class="btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss" href="#">
+                <i class="fa fa-close"></i>
+                Close Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- ..................CONTROL CENTER  END .............................................. -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}" ></script>
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jqBootstrapValidation.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/contact_me.js')}}"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script>
+    <script type="text/javascript">
+      $('.flip').hover(function(){
+      $(this).find('.card').toggleClass('flipped');
+      });
+    </script>
+
+    <script type="text/javascript">
+      $('.popover-dismiss').popover({
+          trigger: 'focus'
+      });
+
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      });
+    </script>
+
+<script>
+      $(function() {
+        $('input[name="daterange"]').daterangepicker({
+          opens: 'left'
+        }, function(start, end, label) {
+          console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+        });
+      });
+</script> 
+
+  </body>
+
+</html>
